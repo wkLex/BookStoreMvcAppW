@@ -1,0 +1,23 @@
+﻿@model BookStoreMvcAppW.Models.Domain.Book
+
+@{
+}
+<div class="book-detail w-80 m-auto">
+    <div class="img-container">
+        @*<img alt="image" src="/Uploads/@Model.BookImage">*@
+        @*<img alt="image" src="/Uploads/@(Model.BookImage ?? "default-image.jpg")">*@
+        <img alt="image" src="/Uploads/@(Model.BookImage?.ToString())">
+
+
+    </div>
+
+    <div class="detail-container">
+        <h3>Title: @Model.Title</h3>
+        <h4>Author: @Model.Author</h4>
+        <h4>Genre: @Model.GenreNames</h4>
+        <h4>@Model.ReleaseYear</h4>
+    </div>
+</div>
+<div class="w-80 m-auto">
+    <a href="/Home/Index" class="btn btn-default">Back</a>
+</div>

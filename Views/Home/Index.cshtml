@@ -1,0 +1,80 @@
+﻿@model BookStoreMvcAppW.Models.DTO.BookListVm
+@{
+    Layout = "_Layout";
+}
+<section class="search-bar">
+    
+   <!---- <form Search box>-->
+        <form method="get" asp-action="Index">
+        <input type="text" name="term" placeholder="search here">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      @* <a class="btn btn-default" href="/Home/Index">All Books</a>*@
+        <a class="btn btn-default" onclick="showAllBooks()">All Books</a>
+
+    </form>
+</section>
+
+<br />
+<!---- <Click on Image see details of the Book, book-card, list shown by foreach loop>-->
+<!---- <Function Show all books, book-list, as child component in the book class>-->
+<!---- <Class Book-list for adding Show All Books with onclick in All Books button, script in js TO BE DONE>-->
+<section class="books">
+    <div id="book-list"></div>
+    @foreach (var book in Model.BookList)
+    {
+        <div class="book-card" onclick="window.location.href='/Home/BookDetail?bookId=@book.Id'">
+            <div class="book-image">
+                <img src="/Uploads/@book.BookImage">
+            </div>
+            <div class="book-info">
+                <h4>@book.Title</h4>
+                <h4>Author : @book.Author</h4>
+                <h4>Genre: @book.GenreNames</h4>
+                <h4>@book.ReleaseYear</h4>
+            </div>
+        </div>
+    }
+</section>
+
+<!----ORIGINAL CODE  <Click on Image see details of the Book, book-card, list shown by foreach loop>-->
+@*<section class="books">
+    @foreach(var book in Model.BookList){
+    <div class="book-card" onclick="window.location.href='/Home/BookDetail?bookId=@book.Id'">
+        <div class="book-image">
+            <img src="/Uploads/@book.BookImage">
+            </div>
+            <div class="book-info">
+                <h4>@book.Title</h4>
+                <h4>Author : @book.Author</h4>
+                <h4>Genre: @book.GenreNames</h4>
+                <h4>@book.ReleaseYear</h4>
+            </div>
+        </div>
+    }
+</section>*@
+
+    <div class="pagination">
+        <!--defined in class BookListVm.cs (Models->DTO)-->
+        <!--i equals to 1, and 1 is less then totalpages-->
+        <!--i equals to currentPage model, then apply the class "active" (shows color)-->
+        <!--else, not applying the class "active" = shows no color-->
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            if (i == Model.CurrentPage)
+            {
+                <a href="/Home/Index?currentPage=@i&term=@Model.Term" class="active">@i</a>
+            }
+            else
+            {
+                <a href="/Home/Index?currentPage=@i&term=@Model.Term">@i</a>
+
+            }
+        }
+</div>
+@*<script>
+   scipt>
+    $(document).ready(function () {
+    showAllBooks();
+    });
+</script>
+*@

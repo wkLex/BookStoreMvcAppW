@@ -1,0 +1,39 @@
+﻿@model BookStoreMvcAppW.Models.DTO.BookListVm
+
+@{   Layout = "_Layout";
+}
+
+<div class="tbl-container">
+    <h2>Books</h2>
+    <br />
+    <h3>Choose to Edit or Delete a Book</h3>
+    <br/>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>ReleaseYear</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+        @foreach(var item in Model.BookList){
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Author</td>
+            <td>@item.GenreNames</td>
+            <td>@item.ReleaseYear</td>
+            <td><img style="height:100px;width:100px" src="/Uploads/@item.BookImage"/></td>
+            <td>
+                <a href="/Book/Update?id=@item.Id" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                <a onclick="return window.confirm('Are you sure you want to delete this book?')" href="/Book/Delete?id=@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        }
+     
+    </table>
+    <div class="input-container">
+        <a href="/Book/Create" class="btn btn-sec">Back</a>
+    </div>
+</div>
