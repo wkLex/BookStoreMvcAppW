@@ -13,7 +13,6 @@
 
     </form>
 </section>
-
 <br />
 <!---- <Click on Image see details of the Book, book-card, list shown by foreach loop>-->
 <!---- <Function Show all books, book-list, as child component in the book class>-->
@@ -23,11 +22,12 @@
     @foreach (var book in Model.BookList)
     {
         <div class="book-card" onclick="window.location.href='/Home/BookDetail?bookId=@book.Id'">
+            <h4>@book.Title</h4>
             <div class="book-image">
                 <img src="/Uploads/@book.BookImage">
             </div>
             <div class="book-info">
-                <h4>@book.Title</h4>
+                @* <h4>@book.Title</h4>*@
                 <h4>Author : @book.Author</h4>
                 <h4>Genre: @book.GenreNames</h4>
                 <h4>@book.ReleaseYear</h4>
@@ -35,6 +35,8 @@
         </div>
     }
 </section>
+
+
 
 <!----ORIGINAL CODE  <Click on Image see details of the Book, book-card, list shown by foreach loop>-->
 @*<section class="books">

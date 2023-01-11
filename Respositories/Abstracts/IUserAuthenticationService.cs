@@ -8,6 +8,6 @@ namespace BookStoreMvcAppW.Respositories.Abstracts
         Task LogoutAsync();
         Task<Status> RegisterAsync(RegistrationModel model);
 
-       // Task<Status> ChangePasswordAsync(ChangePasswordModel model, string username); // Make later
+       // Task<Status> ChangePasswordAsync(ChangePasswordModel model, string username); // Create later
     }
 }

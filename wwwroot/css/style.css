@@ -119,7 +119,8 @@ body {
     flex-wrap: wrap;
     /* background-color: red; */
     /*font-family: var(--font-mukta);*/
-    --font-poppins: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
 }
 
 /*.book-card {
@@ -135,18 +136,13 @@ body {
 /*}*/
 
 .book-card {
-    /*   padding: 2%;*/
     padding: 0.6%;
-    /* margin: 2%;*/
     margin: 1%;
-    /*flex-basis: 16%;*/
-    /* width: 16%;*/
     width: 18%;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     cursor: pointer;
-    /* background-color: yellow; */
     border-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -179,7 +175,6 @@ body {
         /* Style the active/current link */
         /*green new color*/
         .pagination a.active {
-            /*background-color: rgb(169, 30, 255);*/
             /*background-color: rgb(30, 122, 255);*/
            /* background-color: rgb(51, 255, 255);*/
             background-color: rgb(136 233 158);
@@ -198,9 +193,10 @@ footer {
     height: 3rem;
     background-color: rgb(240, 240, 240);
     font-size: 1rem;
-    font-family: var(--font-mukta);
+    font-family: "Poppins", sans-serif;
+    /* font-family: var(--font-mukta);*/
     padding: 1% 2%;
-   /* text-align: right;*/
+    /* text-align: right;*/
     text-align: center;
 }
 
@@ -264,7 +260,8 @@ footer {
 
 .book-detail {
     display: flex;
-    font-family: var(--font-mukta);
+    font-family: "Poppins", sans-serif;
+    /*font-family: var(--font-mukta);*/
     max-height: 50%;
 }
 
@@ -282,7 +279,9 @@ footer {
     padding: 0 1.2rem;
 }
 
-
+.about {
+    font-family: "Poppins", sans-serif;
+}
 /* Media queries */
 
 @media (max-width: 920px) {

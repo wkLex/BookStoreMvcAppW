@@ -42,7 +42,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
                 return status;
             }
 
-            // OBS OBS TA BORT TELEFONUMMER?? Add later
+            // Add later - ROLES AND CHANGE PASSWORD
             // If username not taken = create new user
             // All new data comming from frontend user input
             ApplicationUser user = new ApplicationUser()

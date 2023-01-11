@@ -90,7 +90,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
             if (paging) // if paging is false, then
             {
                 // we're applying paging
-                int pageSize = 15; 
+                int pageSize = 15; // 15 book cards on each page
                 int count = list.Count;
                 int TotalPages = (int)Math.Ceiling(count / (double)pageSize);
                 list = list.Skip((currentPage-1)*pageSize).Take(pageSize).ToList();
@@ -107,7 +107,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
                               on genre.Id equals bg.GenreId
                               where bg.BookId == book.Id
                               select genre.GenreName).ToList();
-                var genreNames = string.Join(',', genres);
+                var genreNames = string.Join(',', genres); // TO FIX: Why isn't it giving space between the genreNames, the letter and the comma
                 book.GenreNames = genreNames;
 
             }
@@ -127,7 +127,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
                 {
                     ctx.BookGenres.Remove(bGenre); // this object will be removed from the BookGenres table in Db
                 }
-                foreach (int genId in model.Genres) // Solving: genre does not updating when editing
+                foreach (int genId in model.Genres) // SOLVED genre didn't not update when editing
                 {
                     var bookGenre = ctx.BookGenres.FirstOrDefault(a => a.BookId == model.Id && a.GenreId == genId);
                     if (bookGenre == null)  // If bookGenre equals to null, we will add this in the table
@@ -137,7 +137,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
                     }
                 }
                 ctx.Books.Update(model);
-                // we have to add these genre Id:s in bookGenres table
+                // we add these genre Id:s in bookGenres Db table
                 ctx.SaveChanges();
                 return true;
 
@@ -148,7 +148,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
             }
         }
 
-        // Create a multiple select list for genre Id:s for updating Books in admin
+        // Create a multiple select list for genre Id:s for updating Books in Admin
         // Mehtod (connected to new property, definition in class Book.cs)
         // Method also declared in interface IBookService.cs
         public List<int> GetGenreByBookId(int bookId)
