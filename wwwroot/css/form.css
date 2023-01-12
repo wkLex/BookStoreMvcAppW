@@ -69,13 +69,6 @@ label {
     margin-right: 0.2rem;
 }
 
-/*Knappar lila*/
-/*.btn-default {
-    background: #6a3093;*/ /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #a044ff, #6a3093);*/ /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #a044ff, #6a3093);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/*}*/
-
 /*göra knappar GRÖNA*/
 .btn-default {
     background: #5dda57; /* fallback for old browsers */
@@ -83,12 +76,6 @@ label {
     background: #5dda57; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* Buttins blue
-.btn-sec {
-    background: #4d63df; /* fallback for old browsers */
-   /* background: -webkit-linear-gradient(to right, #6275dd, #4d63df); /* Chrome 10-25, Safari 5.1-6 */
-/*background: linear-gradient(to right, #6275dd, #4d63df);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/*}*/
 
 /*Make buttons dark green*/
 .btn-sec {
