@@ -6,7 +6,6 @@
 
 :root {
     --bg-color: rgb(255, 255, 255);
-  /*  --font-mukta: "Mukta", sans-serif;*/
     --font-poppins: "Poppins", sans-serif;
 }
 
@@ -23,7 +22,9 @@ body {
 .nav-bar {
     font-family: "Poppins", sans-serif;
     display: flex;
-    /* background-color: var(--nav-bg-color); */
+    background-color: rgb(205 250 215);
+    /*background-color: rgb(136 246 160);*/
+   /* background-color: lightgreen;*/
     padding: 1.1rem 0.5px;
     width: 100%;
     justify-content: space-around;
@@ -93,6 +94,7 @@ body {
 .search-bar {
     width: 100%;
     padding: 0 2%;
+
 }
 
     .search-bar input[type="text"] {
@@ -117,23 +119,10 @@ body {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    /* background-color: red; */
-    /*font-family: var(--font-mukta);*/
+   /* background-color: green;*/
     font-size: 0.9rem;
     font-family: "Poppins", sans-serif;
 }
-
-/*.book-card {
-    padding: 2%;
-    margin: 2%;*/
-    /*flex-basis: 16%;*/
-    /*width: 16%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    cursor: pointer;*/
-    /* background-color: yellow; */
-/*}*/
 
 .book-card {
     padding: 0.6%;
@@ -143,11 +132,12 @@ body {
     flex-direction: column;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     cursor: pointer;
-    border-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    background-color: lightyellow; 
+    border-radius: 0.6rem;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
 }
 
     .book-card:hover {
@@ -157,6 +147,7 @@ body {
 
 .book-image img {
     width: 100%;
+    border-radius: 0.3rem;
 }
 
 /* Pagination links */
@@ -173,11 +164,12 @@ body {
     }
 
         /* Style the active/current link */
-        /*green new color*/
+        /*green color*/
         .pagination a.active {
-            /*background-color: rgb(30, 122, 255);*/
-           /* background-color: rgb(51, 255, 255);*/
-            background-color: rgb(136 233 158);
+            border-radius: 0.25rem;
+            background-color: rgb(205 250 215);
+            /* background-color: rgb(136 246 160);*/
+            /*background-color: lightgreen;*/
             /* color: white;*/
             color: black;
         }
@@ -194,7 +186,6 @@ footer {
     background-color: rgb(240, 240, 240);
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
-    /* font-family: var(--font-mukta);*/
     padding: 1% 2%;
     /* text-align: right;*/
     text-align: center;
@@ -261,22 +252,23 @@ footer {
 .book-detail {
     display: flex;
     font-family: "Poppins", sans-serif;
-    /*font-family: var(--font-mukta);*/
-    max-height: 50%;
+    max-height: 60%;
+   /* max-width: 25%;*/
 }
 
 .img-container {
-    max-width: 40%;
+    max-width: 90%;
 }
 
     .img-container img {
         max-width: 100%;
         height: auto;
-        border-radius: 0.25rem;
+        border-radius: 0.35rem;
     }
 
 .detail-container {
     padding: 0 1.2rem;
+    max-width: 60%;
 }
 
 .about {

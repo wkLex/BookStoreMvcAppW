@@ -24,17 +24,13 @@
            The book library
         </div>
         <ul class="nav-link">
+            @*<li><a href="About">About</a></li>*@
             <li><a class="active" href="/Home/Index">Home</a></li>
-          @*  <li><a href="About">About</a></li>*@
-            <li><a href="Home/About">About</a></li>
-            @if(!string.IsNullOrEmpty(username)) // Visas för inloggade (username not empty)
-           // @if(User.IsInRole("Admin")) //Eller använda denna: visas bara för admin
-            // Below: Admin tab with the paths of links
-            {
-                <li><a href="/Book/BookList">Edit Book</a></li>
+            @if (!string.IsNullOrEmpty(username)) // Visas för inloggade (username not empty) // @if(User.IsInRole("Admin")) //Eller använda denna: visas bara för admin Below: Admin tab with the paths of links
+            {  <li><a href="/Book/BookList">Edit Book</a></li>
                 <li><a href="/Book/Create">Add Book</a></li>
-                <li><a href="/Genre/GenreList/">Edit Genre</a></li>
-                <li>
+                   <li><a href="/Genre/GenreList/">Edit Genre</a></li>
+                    <li>
                     <a href="#">Admin <i class="fa fa-caret-down"></i></a>
                     <ul class="dropdown-nav-link">
                         <li><a href="/Book/Create">Books</a></li>
@@ -43,6 +39,7 @@
                     </ul>
                 </li>
             }
+            <li><a href="Home/About">About<a></li>
 
             @if (string.IsNullOrEmpty(username)) // Check if user is logged in or not. If not = Login is shown.
             {

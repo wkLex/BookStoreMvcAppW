@@ -135,7 +135,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
 
         }
 
-        // DO THIS LATER !!!
+        //Change password DO THIS LATER !!!
         //public async Task<Status> ChangePasswordAsync(ChangePasswordModel model, string username)
         //{
         //    var status = new Status();

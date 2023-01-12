@@ -69,7 +69,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
             }
         }
 
-        public Book GetByID(int Id)
+        public Book GetByID(int Id) // TO SOLVE GENRENAMES NOT SHOWING BookDetail.cshtml
         {
             var data = ctx.Books.Find(Id);
             return ctx.Books.Find(Id);
@@ -107,7 +107,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
                               on genre.Id equals bg.GenreId
                               where bg.BookId == book.Id
                               select genre.GenreName).ToList();
-                var genreNames = string.Join(',', genres); // TO FIX: Why isn't it giving space between the genreNames, the letter and the comma
+                var genreNames = string.Join(", ", genres);
                 book.GenreNames = genreNames;
 
             }
@@ -137,7 +137,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
                     }
                 }
                 ctx.Books.Update(model);
-                // we add these genre Id:s in bookGenres Db table
+                // we add these genre Id:s to the bookGenres Db table
                 ctx.SaveChanges();
                 return true;
 

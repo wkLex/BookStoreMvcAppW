@@ -16,16 +16,6 @@ namespace BookStoreMvcAppW.Respositories.Implementation
     // Follows the naming conventions for C#, where type names (such as class names and interface names)
     // are typically written in PascalCase
 
-
-    // TEST USING IHOSTINGENVIRONMENT INSTEAD OF IWEBHOSTINGENVIRONEMNT
-    //{
-    //    private readonly IHostingEnvironment _environment;
-
-    //    public FileService(IHostingEnvironment environment)
-    //    {
-    //        _environment = environment;
-    //    }
-
     {
         private readonly IWebHostEnvironment _environment;
         public FileService(IWebHostEnvironment env) // Define constructor, pass IWebhost.. as a paratmeter
