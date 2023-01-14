@@ -22,8 +22,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
         {
             try
             {
-                ctx.Books.Add(model);
-               // ctx.Book.Add(model); //  Books! Book doesn't work
+                ctx.Books.Add(model);  //  Books! Book doesn't work
                 ctx.SaveChanges();
                 foreach (int genreId in model.Genres)
                 {
@@ -74,7 +73,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
             var data = ctx.Books.Find(Id);
             return ctx.Books.Find(Id);
         }
-        // Method in the for search by title plus paging on Home page
+        // Method for search by title plus pagination on Home page
         // Connect the parameters, bool paging=false, int currentPage=0, with the interface IBookService definition
         public BookListVm List(string term="", bool paging=false, int currentPage=0) // Changed name from IQueryable<Book> to BookListVm
                                                                                     // Connection to this list in the DTO file->BookListVm.cs

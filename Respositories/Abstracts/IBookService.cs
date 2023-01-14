@@ -10,7 +10,7 @@ namespace BookStoreMvcAppW.Respositories.Abstracts
         Book GetByID(int Id); // Will return the Book object by Id
         bool Delete(int Id); // Delete by Id
        BookListVm List(string term="", bool paging = false, int currentPage = 0); // A list of type Book, will return a list of Book objects
-                                        // Parameters for searching and pagining (BookService.cs, Index.cshtml, HomeController.cs)
+                                        // Parameters for searching and pagination (BookService.cs, Index.cshtml, HomeController.cs)
        List<int> GetGenreByBookId(int bookId); // MultiSelectList for genres, connected to BookService.cs and class Book.cs
     }
 }

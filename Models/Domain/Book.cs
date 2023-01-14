@@ -19,8 +19,8 @@ namespace BookStoreMvcAppW.Models.Domain
         public string? BookImage { get; set; } // stores book image name with extension (ex, image0002.jpg)
 
         [NotMapped] // Not sent and showed in the Database table
-       // [Required] // To prevent the server side to requier image and prevent uploading image /Troubleshooting ?
-        public IFormFile? ImageFile { get; set; } // Adding question marks to get through in the web form asking "required" (here and down)
+       // [Required] // To prevent the server side to requier image /Troubleshooting 
+        public IFormFile? ImageFile { get; set; } // Adding question marks to get through in the web form asking "required" (here and down), and refusing uploading images
         [NotMapped]
         [Required] 
         public List<int>? Genres { get; set; } // changed from string Id to list of ints

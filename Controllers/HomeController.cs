@@ -17,9 +17,11 @@ namespace BookStoreMvcAppW.Controllers
         //    var books = _bookService.List(term, true, currentPage);
         //    return View(books);
         //}
-        public IActionResult Index(string term="", int currentPage = 1) // Search method on the Home page (Index.cshtml)
+
+        // Method, action for Search box and pagination on Index page
+        public IActionResult Index(string term="", int currentPage = 1) // Search method on the Home page (Index.cshtml) + pagination
         {
-            var books = _bookService.List(term, true, currentPage); // Pass term, asking for paging? = true (BookService, IBookService, Index.cshtml)
+            var books = _bookService.List(term, true, currentPage); // Pass term + asking for pagination = true (BookService, IBookService, Index.cshtml)
             return View(books); // pass the books here
         }
 

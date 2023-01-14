@@ -45,7 +45,7 @@ namespace BookStoreMvcAppW.Respositories.Implementation
                 }
 
                 string uniqueString = Guid.NewGuid().ToString();
-                // we are trying to create a unique filename here
+                // we are creating a unique filename here
                 var newFileName = uniqueString + ext;
                 var fileWithPath = Path.Combine(path, newFileName);
                 var stream = new FileStream(fileWithPath, FileMode.Create);

@@ -58,7 +58,7 @@ namespace BookStoreMvcAppW.Controllers
             
             else
             {
-                TempData["msg"] = "Could not log in. Please, check Username and password.";
+                TempData["msg"] = "Could not log in. Please, check the Username and Password.";
                 return RedirectToAction(nameof(Login));
             }
           
